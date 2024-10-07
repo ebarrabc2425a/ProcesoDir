@@ -4,7 +4,7 @@ import java.io.IOException;
 public class ProcesoDir {
     public static void main(String[] args) {
         try {
-            ProcessBuilder processBuilder = new ProcessBuilder("cmd", "/c", "dir", "/w /p");
+            ProcessBuilder processBuilder = new ProcessBuilder("cmd", "/c", "dir", "/w", "/p");
             processBuilder.directory(new File(System.getProperty("user.home")));
             Process process = processBuilder.start();
             int exitCode = process.waitFor();
